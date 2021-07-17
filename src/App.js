@@ -147,7 +147,7 @@ function App() {
         style={{ height: 'var(--topbar-height)' }}
       >
         <a href="https://mrutyunjaydash.github.io/Portfolio/">
-          <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="FireChat" width={50} />
+          <img src='/logo.png' alt="FireChat" width={50} />
         </a>
         <div className="flex items-center">
           {user ? (
