@@ -174,6 +174,9 @@ function App() {
       >
         {renderContent()}
       </main>
+      <footer className="shadow-md text-center">
+        Made with ❤ Mrutyunjay Dash
+      </footer>
     </div>
   );
 }
