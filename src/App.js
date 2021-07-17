@@ -141,7 +141,8 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-coolDark-500 dark:text-white transition-colors">
+    <div className="flex flex-col h-full bg-white dark:bg-coolDark-500 dark:text-white transition-colors" 
+      style={{ overflow:'hidden'}}>
       <header
         className="flex-shrink-0 flex items-center justify-between px-4 sm:px-8 shadow-md"
         style={{ height: 'var(--topbar-height)' }}
@@ -170,8 +171,8 @@ function App() {
       >
         {renderContent()}
       </main>
-      <footer className="shadow-md text-center">
-        Made with ❤ Mrutyunjay Dash
+      <footer className="text-center">
+          <p>Made with ❤ Mrutyunjay Dash</p>
       </footer>
     </div>
   );
