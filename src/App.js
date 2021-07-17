@@ -48,10 +48,6 @@ function App() {
   const { user, initializing } = useAuthState(firebase.auth());
   const [darkMode, setDarkMode] = useDarkMode();
 
-  const brandLogo = darkMode
-    ? `${process.env.PUBLIC_URL}/logo192.png`
-    : `${process.env.PUBLIC_URL}/logo192.png`;
-
   const ThemeIcon = darkMode ? SunIcon : MoonIcon;
 
   const signInWithGoogle = async () => {
@@ -151,7 +147,7 @@ function App() {
         style={{ height: 'var(--topbar-height)' }}
       >
         <a href="https://mrutyunjaydash.github.io/Portfolio/">
-          <img src={brandLogo} alt="FireChat" width={50} />
+          <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="FireChat" width={50} />
         </a>
         <div className="flex items-center">
           {user ? (
