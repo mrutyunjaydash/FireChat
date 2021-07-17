@@ -147,7 +147,7 @@ function App() {
         className="flex-shrink-0 flex items-center justify-between px-4 sm:px-8 shadow-md"
         style={{ height: 'var(--topbar-height)' }}
       >
-        <a href="https://mrutyunjaydash.github.io/Portfolio/">
+        <a href="https://github.com/mrutyunjaydash/FireChat">
           <img src='/logo.png' alt="FireChat" width={50} />
         </a>
         <div className="flex items-center">
