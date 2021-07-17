@@ -16,6 +16,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
+const db = firebase.firestore();
+const query = db.collection('messages').orderBy('createdAt').limit(100);
 
 const App = () => {
 
