@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
@@ -15,7 +15,28 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+const auth = firebase.auth();
+
 const App = () => {
+
+  const [initializing, setInitializing] = useState(true);
+  const [user, setUser] = useState(() => auth.currentUser);
+
+  useEffect(() => {
+    const unsubscribe = firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(false);
+      }
+      if (initializing) {
+        setInitializing(false);
+      }
+    });
+
+    // Cleanup subscription
+    return unsubscribe;
+  }, [initializing]);
 
   const signInWithGoogle = async () => {
     // Retrieve Google provider object
@@ -30,9 +51,24 @@ const App = () => {
     }
   };
 
+  const signOut = async () => {
+    try {
+      await firebase.auth().signOut();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <>
-      <Button onClick={signInWithGoogle}>Sign in with Google</Button>
+      {
+        user ? (
+          <>
+            <Button onClick={signOut}>Sign out</Button>
+            <p>Welcome to the chat!</p>
+          </>
+        ) : <Button onClick={signInWithGoogle}>Sign in with Google</Button>
+      }
     </>
   );
 };
