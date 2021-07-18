@@ -15,7 +15,7 @@ A React Chat app developed using ReactJS and Firebase
 1. Clone the project repository:
    `https://github.com/mrutyunjaydash/ChatApp.git`
 
-2. Navigate to the project folder: `cd ChatApp`
+2. Navigate to the project folder: `cd FireChat`
 
 3. Install the dependencies: `npm install`
 
