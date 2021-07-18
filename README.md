@@ -1,7 +1,11 @@
 # FireChat
-A React Chat app developed using ReactJS and Firebase
+A Chat web app where a user can login using his Google Account and start chatting in the world chat!
+> _**REACTJS** has been used to handle the Frontend with different Hooks_
 
-## create-react-app
+> _**Firebase** is used to handle the Backend of the app_
+
+The app is live [here](https://react-chat-app-f07fb.firebaseapp.com/)
+## react-scripts
 
 - `start`: Runs the app in the development mode.
 - `build`: Builds the app for production to the build folder. It correctly
@@ -15,7 +19,7 @@ A React Chat app developed using ReactJS and Firebase
 1. Clone the project repository:
    `https://github.com/mrutyunjaydash/ChatApp.git`
 
-2. Navigate to the project folder: `cd ChatApp`
+2. Navigate to the project folder: `cd FireChat`
 
 3. Install the dependencies: `npm install`
 
