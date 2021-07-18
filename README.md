@@ -4,7 +4,7 @@ A Chat web app where a user can login using his Google Account and start chattin
 
 > _**Firebase** is used to handle the Backend of the app_
 
-The app is live [here](https://react-chat-app-f07fb.firebaseapp.com/)
+The app is live [https://react-chat-app-f07fb.firebaseapp.com/](https://react-chat-app-f07fb.firebaseapp.com/)
 ## react-scripts
 
 - `start`: Runs the app in the development mode.
